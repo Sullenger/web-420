@@ -64,7 +64,7 @@ const header = require('../sullenger-header.js');
 console.log(header.display("Jason" , "Sullenger" , "api-Gateway"));
 console.log(' ');
 
-mongoose.connect('mongodb+srv://admin:rtqTnqWj1dZUIHCM@ems-nhomg.mongodb.net/test?retryWrites=true', {
+mongoose.connect('mongodb+srv://admin:qoJeQRdQ7AYvSNlf@ems-nhomg.mongodb.net/test?retryWrites=true', {
   promiseLibrary: require('bluebird')}).then ( () => console.log('connection successful')).catch( (err) => console.error(err));
 
 // mongoose.connect('mongodb://admin:admin@ds121588.mlab.com:21588/mean-library', {
