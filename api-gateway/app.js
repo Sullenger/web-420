@@ -20,12 +20,6 @@ var indexRouter = require('./routes/index');
 
 var apiCatalog = require('./routes/api-catalog')
 
-mongoose.connect('mongodb+srv://admin:rtqTnqWj1dZUIHCM@ems-nhomg.mongodb.net/test?retryWrites=true', {
-  promiseLibrary: require('bluebird')}).then ( () => console.log('connection successful')).catch( (err) => console.error(err));
-
-// mongoose.connect('mongodb://admin:admin@ds121588.mlab.com:21588/mean-library', {
-//   promiseLibrary: require('bluebird')}).then ( () => console.log('connection successful')).catch( (err) => console.error(err));
-
 var app = express();
 
 // view engine setup
@@ -66,8 +60,5 @@ console.log(' ');
 
 mongoose.connect('mongodb+srv://admin:qoJeQRdQ7AYvSNlf@ems-nhomg.mongodb.net/test?retryWrites=true', {
   promiseLibrary: require('bluebird')}).then ( () => console.log('connection successful')).catch( (err) => console.error(err));
-
-// mongoose.connect('mongodb://admin:admin@ds121588.mlab.com:21588/mean-library', {
-//   promiseLibrary: require('bluebird')}).then ( () => console.log('connection successful')).catch( (err) => console.error(err));
 
 module.exports = app;
