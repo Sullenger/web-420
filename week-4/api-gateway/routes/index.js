@@ -8,11 +8,12 @@
 ;===========================================
 */
 
-var config = {};
-config.web = {};
-config.web.port = process.env.PORT || '3000';
+var express = require('express');
+var router = express.Router();
 
-// public key
-config.web.secret = 'topsecret';
+/* GET home page. */
+router.get('/', function(req, res, next) {
+  res.render('index', { title: 'Express' });
+});
 
-module.exports = config;
+module.exports = router;
