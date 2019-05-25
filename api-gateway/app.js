@@ -27,14 +27,14 @@ var app = express();
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
 app.use('/api', apiCatalog);
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
 
 app.use('/', indexRouter);
 app.use('/api', apiCatalog);
@@ -61,7 +61,7 @@ const header = require('../sullenger-header.js');
 console.log(header.display("Jason" , "Sullenger" , "api-Gateway"));
 console.log(' ');
 
-mongoose.connect('mongodb+srv://admin:qoJeQRdQ7AYvSNlf@ems-nhomg.mongodb.net/test?retryWrites=true', {
+mongoose.connect('mongodb+srv://admin:qoJeQRdQ7AYvSNlf@ems-nhomg.mongodb.net/api-gateway?retryWrites=true', {
   promiseLibrary: require('bluebird')}).then ( () => console.log('connection successful')).catch( (err) => console.error(err));
 
 module.exports = app;
