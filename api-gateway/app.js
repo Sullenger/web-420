@@ -57,9 +57,9 @@ app.use(function(err, req, res, next) {
 });
 
 // Console logs the header created previously
-const header = require('../sullenger-header.js');
-console.log(header.display("Jason" , "Sullenger" , "api-Gateway"));
-console.log(' ');
+// const header = require('../sullenger-header.js');
+// console.log(header.display("Jason" , "Sullenger" , "api-Gateway"));
+// console.log(' ');
 
 mongoose.connect('mongodb+srv://admin:qoJeQRdQ7AYvSNlf@ems-nhomg.mongodb.net/api-gateway?retryWrites=true', {
   promiseLibrary: require('bluebird')}).then ( () => console.log('connection successful')).catch( (err) => console.error(err));
